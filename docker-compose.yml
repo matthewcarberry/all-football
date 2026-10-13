@@ -1,0 +1,29 @@
+services:
+  all-football:
+    build: .
+    container_name: all-football
+    restart: unless-stopped
+    ports:
+      - "9999:8080"
+    volumes:
+      - ./data:/app/data
+    labels:
+      net.unraid.docker.managed: "dockerman"
+      net.unraid.docker.webui: "http://[IP]:[PORT:8080]/"
+      net.unraid.docker.icon: "https://all-football.com/favicon.svg"
+    environment:
+      PORT: 8080
+      CACHE_TTL_MS: 60000
+      LIVE_CACHE_TTL_MS: 60000
+      API_FOOTBALL_KEY: ${API_FOOTBALL_KEY:-}
+      API_FOOTBALL_SEASON: ${API_FOOTBALL_SEASON:-2026}
+      API_FOOTBALL_CACHE_TTL_MS: ${API_FOOTBALL_CACHE_TTL_MS:-1800000}
+      API_FOOTBALL_SQUAD_CACHE_TTL_MS: ${API_FOOTBALL_SQUAD_CACHE_TTL_MS:-21600000}
+      API_FOOTBALL_DAILY_LIMIT: ${API_FOOTBALL_DAILY_LIMIT:-5000}
+      API_FOOTBALL_USAGE_FILE: ${API_FOOTBALL_USAGE_FILE:-/app/data/api-football-usage.json}
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:8080/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
