@@ -1,0 +1,40 @@
+{
+  "name": "world-cup-dashboard",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "tsc -b && npm run build:server && vite build",
+    "build:server": "tsc -p tsconfig.server.json",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "start": "node dist-server/server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "lucide-react": "^1.21.0",
+    "morgan": "^1.11.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^10.0.3",
+    "nodemon": "^3.1.14",
+    "oxlint": "^1.69.0",
+    "tsx": "^4.22.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
+  }
+}

@@ -1,0 +1,101 @@
+:root {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --background: #f5f7fb;
+  --surface: #ffffff;
+  --surface-elevated: #f8fafc;
+  --pitch: #e7fff3;
+  --text: #334155;
+  --text-strong: #0f172a;
+  --muted: #64748b;
+  --line: #dbe3ed;
+  --line-strong: #cbd5e1;
+  --accent: #e90052;
+  --success: #00b866;
+  --danger: #c90049;
+  --warning: #b40040;
+  --info: #009fb0;
+  --champions: #00b866;
+  --europa: #d99000;
+  --conference: #009fb0;
+  --live: #009fb0;
+  --placement: #00b866;
+  --focus-ring: rgba(4, 245, 255, 0.48);
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+  color-scheme: light;
+  color: var(--text);
+  background: var(--background);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-synthesis: none;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='dark'] {
+  --background: #191919;
+  --surface: #222222;
+  --surface-elevated: #2b2b2b;
+  --pitch: #252525;
+  --text: #d1d1d1;
+  --text-strong: #f4f4f4;
+  --muted: #9b9b9b;
+  --line: #3d3d3d;
+  --line-strong: #505050;
+  --shadow: 0 18px 42px rgb(0 0 0 / .26);
+  --focus-ring: rgb(255 255 255 / .24);
+  color-scheme: dark;
+}
+
+:root[data-color-blind='true'] {
+  --danger: #d55e00;
+  --success: #0072b2;
+  --warning: #f0e442;
+  --info: #009e73;
+  --champions: #0072b2;
+  --europa: #d55e00;
+  --conference: #cc79a7;
+  --live: #0072b2;
+  --placement: #cc79a7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  transition: color .18s ease, background-color .18s ease;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

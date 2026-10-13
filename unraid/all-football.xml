@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>all-football</Name>
+  <Repository>ghcr.io/matthewcarberry/all-football:latest</Repository>
+  <Registry>https://github.com/matthewcarberry/all-football/pkgs/container/all-football</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/matthewcarberry/all-football/issues</Support>
+  <Project>https://github.com/matthewcarberry/all-football</Project>
+  <Overview>Football dashboard with matches, standings and club profiles. React client served by an Express API on port 8080.</Overview>
+  <Category>MediaApp:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/matthewcarberry/all-football/main/unraid/all-football.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/matthewcarberry/all-football/main/public/favicon.svg</Icon>
+  <Config Name="Web UI port" Target="8080" Default="9999" Mode="tcp" Description="Host port for the dashboard." Type="Port" Display="always" Required="true" Mask="false">9999</Config>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/all-football" Mode="rw" Description="Persists the API-Football usage counter." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/all-football</Config>
+  <Config Name="PORT" Target="PORT" Default="8080" Description="Port the server listens on inside the container." Type="Variable" Display="advanced" Required="true" Mask="false">8080</Config>
+  <Config Name="CACHE_TTL_MS" Target="CACHE_TTL_MS" Default="60000" Description="Match data cache lifetime in milliseconds." Type="Variable" Display="advanced" Required="false" Mask="false">60000</Config>
+  <Config Name="LIVE_CACHE_TTL_MS" Target="LIVE_CACHE_TTL_MS" Default="60000" Description="Live score cache lifetime in milliseconds." Type="Variable" Display="advanced" Required="false" Mask="false">60000</Config>
+  <Config Name="API_FOOTBALL_KEY" Target="API_FOOTBALL_KEY" Default="" Description="Optional API-Football key. Leave blank to run without it." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="API_FOOTBALL_SEASON" Target="API_FOOTBALL_SEASON" Default="2026" Description="Season requested from API-Football." Type="Variable" Display="advanced" Required="false" Mask="false">2026</Config>
+  <Config Name="API_FOOTBALL_DAILY_LIMIT" Target="API_FOOTBALL_DAILY_LIMIT" Default="5000" Description="Daily API-Football request budget." Type="Variable" Display="advanced" Required="false" Mask="false">5000</Config>
+  <Config Name="API_FOOTBALL_USAGE_FILE" Target="API_FOOTBALL_USAGE_FILE" Default="/app/data/api-football-usage.json" Description="Where the usage counter is stored." Type="Variable" Display="advanced" Required="false" Mask="false">/app/data/api-football-usage.json</Config>
+</Container>
