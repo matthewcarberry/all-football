@@ -12,7 +12,7 @@
   <Category>MediaApp:Other Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/matthewcarberry/all-football/main/unraid/all-football.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/matthewcarberry/all-football/main/public/favicon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/matthewcarberry/all-football/main/unraid/all-football-icon.png</Icon>
   <Config Name="Web UI port" Target="8080" Default="9999" Mode="tcp" Description="Host port for the dashboard." Type="Port" Display="always" Required="true" Mask="false">9999</Config>
   <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/all-football" Mode="rw" Description="Persists the API-Football usage counter." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/all-football</Config>
   <Config Name="PORT" Target="PORT" Default="8080" Description="Port the server listens on inside the container." Type="Variable" Display="advanced" Required="true" Mask="false">8080</Config>
