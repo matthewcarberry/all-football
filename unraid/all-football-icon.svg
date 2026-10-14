@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="all-football-ball"><circle cx="32" cy="32" r="19"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#3d195b"/>
+  <circle cx="32" cy="32" r="19" fill="#fff"/>
+  <g clip-path="url(#all-football-ball)">
+    <path d="M32.00 24.60 L39.04 29.71 L36.35 37.99 L27.65 37.99 L24.96 29.71Z M32.00 18.80 L25.91 14.38 L28.24 7.22 L35.76 7.22 L38.09 14.38Z M44.55 27.92 L46.88 20.77 L54.40 20.77 L56.73 27.92 L50.64 32.34Z M39.76 42.68 L47.28 42.68 L49.61 49.83 L43.52 54.26 L37.43 49.83Z M24.24 42.68 L26.57 49.83 L20.48 54.26 L14.39 49.83 L16.72 42.68Z M19.45 27.92 L13.36 32.34 L7.27 27.92 L9.60 20.77 L17.12 20.77Z" fill="#3d195b"/>
+    <path d="M32.00 24.60 L32.00 18.80 M39.04 29.71 L44.55 27.92 M36.35 37.99 L39.76 42.68 M27.65 37.99 L24.24 42.68 M24.96 29.71 L19.45 27.92" fill="none" stroke="#3d195b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <circle cx="32" cy="32" r="19" fill="none" stroke="#fff" stroke-width="1.6"/>
+</svg>
