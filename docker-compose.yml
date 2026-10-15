@@ -10,7 +10,7 @@ services:
     labels:
       net.unraid.docker.managed: "dockerman"
       net.unraid.docker.webui: "http://[IP]:[PORT:8080]/"
-      net.unraid.docker.icon: "https://all-football.com/favicon.svg"
+      net.unraid.docker.icon: "https://raw.githubusercontent.com/matthewcarberry/all-football/main/unraid/all-football-icon.png"
     environment:
       PORT: 8080
       CACHE_TTL_MS: 60000
